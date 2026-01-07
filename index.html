@@ -1,4 +1,4 @@
-just<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -147,10 +147,11 @@ just<!DOCTYPE html>
     }
 
     /* ================= UPDATES IMAGE ================= */
-    #updates img {
+    .update-image {
       display: block;
-      margin: 10px auto;
-      width: 300px;
+      margin: 20px auto;
+      max-width: 100%;
+      height: auto;
       border-radius: 8px;
     }
 
@@ -179,8 +180,15 @@ just<!DOCTYPE html>
       }
 
       nav a {
-        display: block;
-        margin: 8px 0;
+        display: inline-block;
+        margin: 0 8px;
+      }
+      
+      @media (max-width: 480px) {
+        nav a {
+          display: block;
+          margin: 8px 0;
+        }
       }
     }
   </style>
@@ -274,24 +282,19 @@ just<!DOCTYPE html>
     </ul>
   </section>
 
-  <!-- UPDATES (New Year Wish) -->
+  <!-- UPDATES -->
   <section id="updates" class="highlight">
     <h3>Latest Updates</h3>
 
     <!-- New Year Wish -->
     <p><strong>Jan 1, 2026:</strong> 🎉 Happy New Year! COMR. ADAM IBRAHIM (ALKALI) wishes all nursing students a prosperous 2026.</p>
-    <img src="images/newyear.jpg" alt="COMR. ADAM IBRAHIM New Year Wish">
+    <img src="images/newyear.jpg" alt="COMR. ADAM IBRAHIM New Year Wish" class="update-image">
+
+    <!-- Mubarak Abdullahi Congratulations -->
+    <p><strong>Jan 3, 2026:</strong> 🙏 Assalamu Alaikum Warahmatullah Wabarakatuh. I am <strong>Comrade Adam Ibrahim Alkali</strong>, a student of Community Health, College of Nursing Sciences. I'm delighted to extend my heartfelt congratulations to my brother and friend, <strong>Mubarak Abdullahi Shuaibu</strong>, on his well-deserved victory in the DAKSU election held on 3rd January 2026. May Allah guide you and grant you success in this new responsibility.</p>
+    <img src="images/mbk.png" alt="Congratulations Mubarak Abdullahi" class="update-image">
 
   </section>
-  <!-- UPDATES (Congratulations Mubarak Abdullahi) -->
-<section id="updates" class="highlight">
-  <h3>Latest Updates</h3>
-
-  <!-- Mubarak Abdullahi Congratulations -->
-  <p><strong>Jan 3, 2026:</strong> 🙏 Assalamu Alaikum Warahmatullah Wabarakatuh. I am <strong>Comrade Adam Ibrahim Alkali</strong>, a student of Community Health, College of Nursing Sciences. I’m delighted to extend my heartfelt congratulations to my brother and friend, <strong>Mubarak Abdullahi Shuaibu</strong>, on his well-deserved victory in the DAKSU election held on 3rd January 2026. May Allah guide you and grant you success in this new responsibility.</p>
-  <img src="images/mbk.png" alt="Congratulations Mubarak Abdullahi" style="max-width: 100%; height: auto;">
-
-</section>
 
   <!-- FOOTER -->
   <footer>
@@ -303,4 +306,4 @@ just<!DOCTYPE html>
   </footer>
 
 </body>
-  </html>
+</html>
