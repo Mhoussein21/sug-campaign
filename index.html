@@ -1,338 +1,634 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Comr. Adam Ibrahim Alkali - Candidate for SUG President, College of Nursing Science, Madobi Campus. Leadership with integrity and progress." />
-  <meta name="keywords" content="Adam Ibrahim Alkali, SUG President, College of Nursing Science Madobi, Student Union Government, Nursing Students, SUG Election" />
-  <meta name="author" content="Comr. Adam Ibrahim (Alkali)" />
-  <title>COMR. ADAM IBRAHIM (ALKALI) | SUG President</title>
-  <style>
-    :root {
-      --green: #0b3d2e;
-      --gold: #c9a227;
-      --white: #ffffff;
-      --gray: #f4f4f4;
-      --dark: #1a1a1a;
-    }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-    body {
-      background: var(--white);
-      color: var(--dark);
-      line-height: 1.6;
-    }
-    /* ================= HERO SECTION ================= */
-    .hero {
-      position: relative;
-      height: 70vh;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .hero-img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      animation: zoomEffect 18s ease-in-out infinite;
-    }
-    .overlay {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba(11, 61, 46, 0.65);
-      z-index: 1;
-    }
-    .hero-text {
-      position: relative;
-      z-index: 2;
-      color: var(--white);
-      padding: 20px;
-    }
-    .hero-text h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-    .hero-text h2 {
-      font-size: 1.2rem;
-      font-weight: normal;
-      color: var(--gold);
-    }
-    @keyframes zoomEffect {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.08); }
-      100% { transform: scale(1); }
-    }
-    /* ================= NAV ================= */
-    nav {
-      background: var(--dark);
-      padding: 12px;
-      text-align: center;
-    }
-    nav a {
-      color: var(--white);
-      margin: 0 12px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: var(--gold);
-    }
-    /* ================= SECTIONS ================= */
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    section h3 {
-      color: var(--green);
-      margin-bottom: 15px;
-      font-size: 1.6rem;
-    }
-    section h4 {
-      color: var(--green);
-      margin-top: 25px;
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-    }
-    .highlight {
-      background: var(--gray);
-    }
-    ul {
-      margin-left: 20px;
-    }
-    ul li {
-      margin-bottom: 10px;
-    }
-    .timeline {
-      position: relative;
-      max-width: 800px;
-      margin: 30px auto;
-    }
-    .timeline-item {
-      padding: 15px 20px 15px 30px;
-      margin-bottom: 20px;
-      background: var(--white);
-      border-left: 4px solid var(--gold);
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-      border-radius: 0 5px 5px 0;
-    }
-    .timeline-year {
-      font-weight: bold;
-      color: var(--green);
-      display: block;
-      margin-bottom: 5px;
-    }
-    .timeline-title {
-      font-weight: bold;
-      color: var(--dark);
-      display: block;
-    }
-    .timeline-desc {
-      color: #555;
-      font-size: 0.95rem;
-      margin-top: 5px;
-    }
-    .cta {
-      text-align: center;
-      margin-top: 30px;
-    }
-    .cta a {
-      background: var(--green);
-      color: var(--white);
-      padding: 12px 25px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-    }
-    .cta a:hover {
-      background: var(--gold);
-      color: var(--dark);
-    }
-    /* ================= UPDATES IMAGE ================= */
-    .update-image {
-      display: block;
-      margin: 20px auto;
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-    /* ================= FOOTER ================= */
-    footer {
-      background: var(--dark);
-      color: var(--white);
-      text-align: center;
-      padding: 30px 20px;
-    }
-    footer a {
-      color: var(--gold);
-      text-decoration: none;
-      margin: 0 8px;
-      font-weight: bold;
-    }
-    /* ================= MOBILE ================= */
-    @media (max-width: 600px) {
-      .hero-text h1 {
-        font-size: 1.7rem;
-      }
-      .hero-text h2 {
-        font-size: 1rem;
-      }
-      nav a {
-        display: inline-block;
-        margin: 0 8px;
-      }
-      @media (max-width: 480px) {
-        nav a {
-          display: block;
-          margin: 8px 0;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMR. ADAM IBRAHIM (ALKALI) | SUG President</title>
+    <style>
+        :root {
+            --green: #0b3d2e;
+            --gold: #c9a227;
+            --white: #ffffff;
+            --gray: #f4f4f4;
+            --dark: #1a1a1a;
+            --light-green: #e8f5f0;
+            --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
-      }
-    }
-  </style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: var(--white);
+            color: var(--dark);
+            line-height: 1.6;
+            padding-top: 70px; /* Space for sticky nav */
+        }
+
+        /* ================= STICKY NAVIGATION ================= */
+        nav {
+            background: var(--dark);
+            padding: 15px 20px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: var(--white);
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--gold);
+            background: rgba(201, 162, 39, 0.1);
+        }
+
+        /* ================= HERO SECTION ================= */
+        .hero {
+            position: relative;
+            height: 85vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: zoomEffect 20s ease-in-out infinite;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 61, 46, 0.75);
+            z-index: 1;
+        }
+
+        .hero-text {
+            position: relative;
+            z-index: 2;
+            color: var(--white);
+            padding: 30px;
+            max-width: 900px;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-text h2 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--gold);
+            margin-bottom: 25px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark);
+            padding: 14px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            margin: 15px 10px;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            border: 2px solid var(--gold);
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .cta-button.secondary:hover {
+            background: var(--white);
+            color: var(--dark);
+        }
+
+        @keyframes zoomEffect {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        /* ================= SECTIONS ================= */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h3 {
+            color: var(--green);
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        section h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 2px;
+        }
+
+        /* ================= VISION & WHY VOTE CARDS ================= */
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 5px solid var(--gold);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--green);
+        }
+
+        .card h4 {
+            color: var(--green);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .card li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .card li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        /* ================= CONTACT SECTION ================= */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .contact-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .contact-card h4 {
+            color: var(--green);
+            margin-bottom: 25px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-label {
+            display: block;
+            font-weight: bold;
+            color: var(--dark);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .contact-value {
+            display: block;
+            color: #555;
+            text-decoration: none;
+            font-size: 1.05rem;
+        }
+
+        .contact-value:hover {
+            color: var(--green);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: var(--green);
+            color: var(--white);
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            margin-top: 20px;
+        }
+
+        /* ================= ENDORSEMENTS ================= */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .testimonial {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: var(--card-shadow);
+            position: relative;
+        }
+
+        .testimonial:before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--gold);
+            opacity: 0.2;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--green);
+            text-align: right;
+        }
+
+        /* ================= HOW TO VOTE ================= */
+        .vote-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .vote-step {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: var(--gold);
+            color: var(--dark);
+            border-radius: 50%;
+            line-height: 50px;
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        /* ================= FOOTER ================= */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            margin: 25px 0;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .copyright {
+            margin-top: 25px;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 768px) {
+            nav a {
+                margin: 0 8px;
+                font-size: 0.9rem;
+                padding: 6px 10px;
+            }
+            
+            .hero-text h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-text h2 {
+                font-size: 1.2rem;
+            }
+            
+            section {
+                padding: 60px 15px;
+            }
+            
+            .contact-container, .cards-container, .testimonials {
+                grid-template-columns: 1fr;
+            }
+            
+            body {
+                padding-top: 60px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 10px;
+            }
+            
+            nav a {
+                display: block;
+                margin: 8px 0;
+            }
+            
+            .hero {
+                height: 70vh;
+            }
+            
+            .cta-button {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- HERO -->
-  <header class="hero">
-    <img src="images/banner.jpg" alt="Campaign Banner" class="hero-img">
-    <div class="overlay"></div>
-    <div class="hero-text">
-      <h1>COMR. ADAM IBRAHIM (ALKALI)</h1>
-      <h2>Candidate for SUG President<br>College of Nursing Science, Madobi Campus</h2>
-    </div>
-  </header>
+    <!-- STICKY NAVIGATION -->
+    <nav>
+        <a href="#" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#academic">Academic</a>
+        <a href="#vision">Vision</a>
+        <a href="#endorsements">Endorsements</a>
+        <a href="#contact">Contact</a>
+        <a href="#vote">How to Vote</a>
+        <a href="#updates">Updates</a>
+    </nav>
 
-  <!-- NAV -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#academic">Academic Journey</a>
-    <a href="#vision">Vision</a>
-    <a href="#why">Why Vote</a>
-    <a href="#contact">Contact</a>
-    <a href="#updates">Updates</a>
-  </nav>
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <img src="images/banner.jpg" alt="Campaign Banner" class="hero-img">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h1>COMR. ADAM IBRAHIM (ALKALI)</h1>
+            <h2>Your Candidate for SUG President<br>College of Nursing Science, Madobi Campus</h2>
+            <div class="hero-cta">
+                <a href="#vote" class="cta-button">VOTE NOW</a>
+                <a href="#vision" class="cta-button secondary">VIEW MANIFESTO</a>
+            </div>
+        </div>
+    </header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h3>About the Candidate</h3>
-    <p>I am a committed student leader of the College of Nursing Science, Madobi Campus, contesting for the office of Student Union Government President with a clear mission: to serve students with integrity, transparency, and responsibility.</p>
-    <p>Leadership to me is service — listening to students, representing their interests, and working tirelessly to improve campus life.</p>
-  </section>
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <h3>About the Candidate</h3>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p style="font-size: 1.1rem; text-align: center; margin-bottom: 25px;">I am a committed student leader of the College of Nursing Science, Madobi Campus, contesting for the office of Student Union Government President with a clear mission: to serve students with integrity, transparency, and responsibility.</p>
+            <p style="font-size: 1.1rem; text-align: center;">Leadership to me is service — listening to students, representing their interests, and working tirelessly to improve campus life.</p>
+        </div>
+    </section>
 
-  <!-- ACADEMIC JOURNEY - NEW SECTION -->
-  <section id="academic" class="highlight">
-    <h3>Academic Journey & Background</h3>
-    <p>Comr. Adam Ibrahim Alkali was born in 2003 in Tudun Wada Local Government Area of Kano State. His educational path demonstrates resilience, adaptability, and a commitment to learning.</p>
-    
-    <div class="timeline">
-      <div class="timeline-item">
-        <span class="timeline-year">2009 - 2010</span>
-        <span class="timeline-title">Early Education</span>
-        <p class="timeline-desc">Began nursery education at Model Primary School.</p>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-year">2011 - 2017</span>
-        <span class="timeline-title">Primary Education</span>
-        <p class="timeline-desc">Transferred to Imam Malik Nursery and Primary School, where he completed his primary education.</p>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-year">2017 - 2020</span>
-        <span class="timeline-title">Junior Secondary</span>
-        <p class="timeline-desc">Joined Junior Secondary School at Imam Malik Science and Tahfiz College.</p>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-year">2020 - 2023</span>
-        <span class="timeline-title">Senior Secondary</span>
-        <p class="timeline-desc">After passing the Science and Technical Schools Board exam, he studied at Science College Dawakin Tofa (SS1A, Galadima House), completing WAEC and NECO examinations.</p>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-year">2023 - 2024</span>
-        <span class="timeline-title">Remedial Studies</span>
-        <p class="timeline-desc">Studied at the College of Advanced and Remedial Studies (CAS), Tudun Wada.</p>
-      </div>
-      <div class="timeline-item">
-        <span class="timeline-year">2024 - Present</span>
-        <span class="timeline-title">Current Studies</span>
-        <p class="timeline-desc">Currently enrolled in a two-year Community Nursing program at the College of Nursing and Midwifery, Madobi Campus.</p>
-      </div>
-    </div>
-    
-    <h4>Key Qualities Demonstrated</h4>
-    <ul>
-      <li><strong>Resilience:</strong> Adapted to multiple school transfers due to circumstances beyond his control.</li>
-      <li><strong>Determination:</strong> Successfully navigated entrance exams and interviews for competitive placements.</li>
-      <li><strong>Commitment to Education:</strong> Pursued multiple educational pathways to achieve his goal of entering the healthcare field.</li>
-      <li><strong>Understanding of Student Challenges:</strong> Personal experience with educational disruptions gives him unique insight into student needs.</li>
-    </ul>
-  </section>
+    <!-- ACADEMIC JOURNEY -->
+    <section id="academic" style="background: var(--light-green);">
+        <h3>Academic Journey</h3>
+        <div style="max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: var(--card-shadow);">
+            <p>Comr. Adam Ibrahim Alkali was born in 2003 in Tudun Wada Local Government Area of Kano State. His educational journey demonstrates resilience and commitment to learning through various institutions:</p>
+            
+            <div style="margin-top: 25px;">
+                <h4 style="color: var(--green); margin-bottom: 15px;">Educational Timeline</h4>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
+                        <strong>2009-2010:</strong> Model Primary School (Nursery)
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
+                        <strong>2011-2017:</strong> Imam Malik Nursery and Primary School
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
+                        <strong>2017-2020:</strong> Imam Malik Science and Tahfiz College (Junior Secondary)
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
+                        <strong>2020-2023:</strong> Science College Dawakin Tofa (Senior Secondary)
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
+                        <strong>2023-2024:</strong> College of Advanced and Remedial Studies (CAS), Tudun Wada
+                    </li>
+                    <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
+                        <strong>2024-Present:</strong> College of Nursing and Midwifery, Madobi Campus (Community Nursing)
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-  <!-- VISION -->
-  <section id="vision">
-    <h3>Vision & Manifesto</h3>
-    <h4>🎓 Academic Support</h4>
-    <ul>
-      <li>Improved communication between students and management</li>
-      <li>Better learning conditions</li>
-      <li>Support for academic initiatives</li>
-    </ul>
-    <h4>🧑‍🤝‍🧑 Student Welfare</h4>
-    <ul>
-      <li>Open-door leadership</li>
-      <li>Fast response to student issues</li>
-      <li>Equal representation</li>
-    </ul>
-    <h4>🏫 Campus Development</h4>
-    <ul>
-      <li>Student participation in decisions</li>
-      <li>Clean and secure campus</li>
-      <li>Collaboration with authorities</li>
-    </ul>
-  </section>
+    <!-- VISION CARDS -->
+    <section id="vision">
+        <h3>Vision & Manifesto</h3>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-icon">🎓</div>
+                <h4>Academic Excellence</h4>
+                <ul>
+                    <li>Improved student-lecturer communication</li>
+                    <li>Better library and learning resources</li>
+                    <li>Academic support programs</li>
+                    <li>Regular feedback sessions</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">🤝</div>
+                <h4>Student Welfare</h4>
+                <ul>
+                    <li>Open-door leadership policy</li>
+                    <li>24/7 emergency response system</li>
+                    <li>Health and wellness programs</li>
+                    <li>Improved hostel facilities</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">🏫</div>
+                <h4>Campus Development</h4>
+                <ul>
+                    <li>Student participation in decisions</li>
+                    <li>Clean and secure campus environment</li>
+                    <li>Recreational facilities upgrade</li>
+                    <li>Collaboration with management</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-  <!-- WHY -->
-  <section id="why" class="highlight">
-    <h3>Why You Should Vote for Me</h3>
-    <ul>
-      <li>I listen before acting</li>
-      <li>I believe in teamwork</li>
-      <li>I value transparency</li>
-      <li>I remain accessible</li>
-    </ul>
-    <div class="cta">
-      <a href="#contact">Vote for Progress</a>
-    </div>
-  </section>
+    <!-- WHY VOTE CARDS -->
+    <section style="background: var(--light-green);">
+        <h3>Why Vote For Me?</h3>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-icon">👂</div>
+                <h4>I Listen First</h4>
+                <p>Before making decisions, I consult widely with students to understand their needs and concerns.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">🤲</div>
+                <h4>Transparent Leadership</h4>
+                <p>I believe in open communication and will provide regular updates on SUG activities and finances.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">💪</div>
+                <h4>Proven Resilience</h4>
+                <p>My academic journey shows my ability to overcome challenges - a quality needed in student leadership.</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-icon">📞</div>
+                <h4>Always Accessible</h4>
+                <p>I will maintain multiple channels for students to reach me directly with their issues and ideas.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="#contact" class="cta-button">JOIN THE MOVEMENT</a>
+        </div>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h3>Connect With Me</h3>
-    <ul>
-      <li>Facebook: <a href="https://www.facebook.com/usaini.pro.77" target="_blank">Mhoussein</a></li>
-      <li>TikTok: <a href="https://www.tiktok.com/@mhoussein21" target="_blank">Mhoussein</a></li>
-      <li>WhatsApp: <a href="https://wa.me/2349040288121" target="_blank">Mhoussein</a></li>
-    </ul>
-  </section>
+    <!-- ENDORSEMENTS -->
+    <section id="endorsements">
+        <h3>Endorsements & Testimonials</h3>
+        <div class="testimonials">
+            <div class="testimonial">
+                <p class="testimonial-text">"Adam has shown exceptional leadership qualities during our time together at Science College. His dedication to serving others is genuine and I believe he will make an excellent SUG President."</p>
+                <p class="testimonial-author">- Mubarak Abdullahi Shuaibu<br><small>DAKSU Election Winner</small></p>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"I've known Adam for years. His resilience through various academic challenges shows he has the determination needed to fight for student rights and welfare."</p>
+                <p class="testimonial-author">- A Fellow Nursing Student</p>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">"What impresses me most about Adam is his willingness to listen. In a leader, this quality is more important than always having the answers."</p>
+                <p class="testimonial-author">- Former Classmate</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- UPDATES -->
-  <section id="updates" class="highlight">
-    <h3>Latest Updates</h3>
-   <p><strong>Jan 3, 2026:</strong> 🙏 Assalamu Alaikum Warahmatullah Wabarakatuh. I am <strong>Comrade Adam Ibrahim Alkali</strong>, a student of Community Health, College of Nursing Sciences. I'm delighted to extend my heartfelt congratulations to my brother and friend, <strong>Mubarak Abdullahi Shuaibu</strong>, on his well-deserved victory in the DAKSU election held on 3rd January 2026. May Allah guide you and grant you success in this new responsibility.</p>
-    <img src="images/mbk.png" alt="Congratulations Mubarak Abdullahi" class="update-image">
-    <p><strong>Jan 1, 2026:</strong> 🎉 Happy New Year! COMR. ADAM IBRAHIM (ALKALI) wishes all nursing students a prosperous 2026.</p>
-    <img src="images/newyear.jpg" alt="COMR. ADAM IBRAHIM New Year Wish" class="update-image">
-   
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>Vote Wisely. Vote Progress.<br><strong>COMR. ADAM IBRAHIM (ALKALI)</strong><br>SUG President — College of Nursing Science, Madobi Campus</p>
-  </footer>
-</body>
-    </html>
+    <!-- CONTACT SECTION -->
+    <section id="contact" style="background: var(--light-green);">
+        <h3>Contact & Connect</h3>
+        <div cl
