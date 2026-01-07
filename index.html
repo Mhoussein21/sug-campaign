@@ -26,41 +26,73 @@
             background: var(--white);
             color: var(--dark);
             line-height: 1.6;
-            padding-top: 70px; /* Space for sticky nav */
+            padding-top: 80px;
         }
 
-        /* ================= STICKY NAVIGATION ================= */
+        /* ================= HAMBURGER MENU & NAVIGATION ================= */
         nav {
             background: var(--dark);
             padding: 15px 20px;
-            text-align: center;
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 70px;
         }
 
-        nav a {
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            transition: all 0.4s ease;
+        }
+
+        .nav-links a {
             color: var(--white);
-            margin: 0 15px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.95rem;
             transition: color 0.3s;
             padding: 8px 12px;
             border-radius: 4px;
+            white-space: nowrap;
         }
 
-        nav a:hover, nav a.active {
+        .nav-links a:hover, .nav-links a.active {
             color: var(--gold);
             background: rgba(201, 162, 39, 0.1);
+        }
+
+        .nav-links a.cta-button {
+            background: var(--gold);
+            color: var(--dark);
+            font-weight: bold;
+            padding: 8px 20px;
+        }
+
+        .nav-links a.cta-button:hover {
+            background: #d4b123;
+            color: var(--dark);
+        }
+
+        /* Hamburger Button */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: var(--white);
+            position: absolute;
+            right: 20px;
+            top: 15px;
         }
 
         /* ================= HERO SECTION ================= */
         .hero {
             position: relative;
-            height: 85vh;
+            height: calc(85vh - 70px);
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -415,12 +447,60 @@
             font-size: 0.9rem;
         }
 
-        /* ================= RESPONSIVE ================= */
-        @media (max-width: 768px) {
-            nav a {
-                margin: 0 8px;
+        /* ================= MOBILE RESPONSIVE ================= */
+        @media (max-width: 1024px) {
+            .nav-links a {
                 font-size: 0.9rem;
-                padding: 6px 10px;
+                padding: 7px 10px;
+                margin: 0 5px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--dark);
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 0;
+                gap: 0;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .nav-links a {
+                margin: 0;
+                width: 100%;
+                text-align: center;
+                padding: 15px 20px;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                font-size: 1rem;
+            }
+            
+            .nav-links a.cta-button {
+                margin-top: 15px;
+                border-radius: 5px;
+                width: 90%;
+                background: var(--gold);
+                color: var(--dark);
+                font-weight: bold;
+                border: none;
             }
             
             .hero-text h1 {
@@ -440,22 +520,13 @@
             }
             
             body {
-                padding-top: 60px;
+                padding-top: 70px;
             }
         }
 
         @media (max-width: 480px) {
-            nav {
-                padding: 10px;
-            }
-            
-            nav a {
-                display: block;
-                margin: 8px 0;
-            }
-            
             .hero {
-                height: 70vh;
+                height: calc(80vh - 70px);
             }
             
             .cta-button {
@@ -463,21 +534,29 @@
                 margin: 10px auto;
                 max-width: 250px;
             }
+            
+            section h3 {
+                font-size: 1.8rem;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- STICKY NAVIGATION -->
+    <!-- STICKY NAVIGATION WITH HAMBURGER -->
     <nav>
-        <a href="#" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#academic">Academic</a>
-        <a href="#vision">Vision</a>
-        <a href="#endorsements">Endorsements</a>
-        <a href="#contact">Contact</a>
-        <a href="#vote">How to Vote</a>
-        <a href="#updates">Updates</a>
+        <div class="hamburger">☰</div>
+        <div class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#academic">Academic</a>
+            <a href="#vision">Vision</a>
+            <a href="#endorsements">Endorsements</a>
+            <a href="#contact">Contact</a>
+            <a href="#vote">How to Vote</a>
+            <a href="#updates">Updates</a>
+            <a href="#vote" class="cta-button">VOTE NOW</a>
+        </div>
     </nav>
 
     <!-- HERO SECTION -->
@@ -797,41 +876,61 @@
     </footer>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
+        // Hamburger menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+        
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.textContent = '☰';
                 
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 70,
-                        behavior: 'smooth'
-                    });
+                // Smooth scroll to section
+                const targetId = link.getAttribute('href');
+                if(targetId && targetId !== '#') {
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
                 }
             });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+                navLinks.classList.remove('active');
+                hamburger.textContent = '☰';
+            }
         });
         
         // Update active nav link on scroll
         window.addEventListener('scroll', function() {
             let current = '';
             const sections = document.querySelectorAll('section');
+            const navHeight = 80;
             
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 const sectionHeight = section.clientHeight;
-                if(scrollY >= (sectionTop - 100)) {
+                if(scrollY >= (sectionTop - navHeight - 10)) {
                     current = section.getAttribute('id');
                 }
             });
             
-            document.querySelectorAll('nav a').forEach(link => {
+            document.querySelectorAll('.nav-links a').forEach(link => {
                 link.classList.remove('active');
-                if(link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                } else if(current === '' && link.getAttribute('href') === '#') {
+                if(link.getAttribute('href') === `#${current}` || 
+                   (current === '' && link.getAttribute('href') === '#')) {
                     link.classList.add('active');
                 }
             });
