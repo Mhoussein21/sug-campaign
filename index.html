@@ -1,16 +1,12 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Comr. Adam Ibrahim (Alkali) - Candidate for SUG President, College of Nursing Science, Madobi Campus. Leadership with integrity and progress." />
+  <meta name="description" content="Comr. Adam Ibrahim Alkali - Candidate for SUG President, College of Nursing Science, Madobi Campus. Leadership with integrity and progress." />
   <meta name="keywords" content="Adam Ibrahim Alkali, SUG President, College of Nursing Science Madobi, Student Union Government, Nursing Students, SUG Election" />
   <meta name="author" content="Comr. Adam Ibrahim (Alkali)" />
-
   <title>COMR. ADAM IBRAHIM (ALKALI) | SUG President</title>
-
   <style>
     :root {
       --green: #0b3d2e;
@@ -19,20 +15,17 @@
       --gray: #f4f4f4;
       --dark: #1a1a1a;
     }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
     }
-
     body {
       background: var(--white);
       color: var(--dark);
       line-height: 1.6;
     }
-
     /* ================= HERO SECTION ================= */
     .hero {
       position: relative;
@@ -43,7 +36,6 @@
       justify-content: center;
       text-align: center;
     }
-
     .hero-img {
       position: absolute;
       width: 100%;
@@ -51,7 +43,6 @@
       object-fit: cover;
       animation: zoomEffect 18s ease-in-out infinite;
     }
-
     .overlay {
       position: absolute;
       width: 100%;
@@ -59,79 +50,100 @@
       background: rgba(11, 61, 46, 0.65);
       z-index: 1;
     }
-
     .hero-text {
       position: relative;
       z-index: 2;
       color: var(--white);
       padding: 20px;
     }
-
     .hero-text h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
     }
-
     .hero-text h2 {
       font-size: 1.2rem;
       font-weight: normal;
       color: var(--gold);
     }
-
     @keyframes zoomEffect {
       0% { transform: scale(1); }
       50% { transform: scale(1.08); }
       100% { transform: scale(1); }
     }
-
     /* ================= NAV ================= */
     nav {
       background: var(--dark);
       padding: 12px;
       text-align: center;
     }
-
     nav a {
       color: var(--white);
       margin: 0 12px;
       text-decoration: none;
       font-weight: bold;
     }
-
     nav a:hover {
       color: var(--gold);
     }
-
     /* ================= SECTIONS ================= */
     section {
       padding: 60px 20px;
       max-width: 900px;
       margin: auto;
     }
-
     section h3 {
       color: var(--green);
       margin-bottom: 15px;
       font-size: 1.6rem;
     }
-
+    section h4 {
+      color: var(--green);
+      margin-top: 25px;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
     .highlight {
       background: var(--gray);
     }
-
     ul {
       margin-left: 20px;
     }
-
     ul li {
       margin-bottom: 10px;
     }
-
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 30px auto;
+    }
+    .timeline-item {
+      padding: 15px 20px 15px 30px;
+      margin-bottom: 20px;
+      background: var(--white);
+      border-left: 4px solid var(--gold);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      border-radius: 0 5px 5px 0;
+    }
+    .timeline-year {
+      font-weight: bold;
+      color: var(--green);
+      display: block;
+      margin-bottom: 5px;
+    }
+    .timeline-title {
+      font-weight: bold;
+      color: var(--dark);
+      display: block;
+    }
+    .timeline-desc {
+      color: #555;
+      font-size: 0.95rem;
+      margin-top: 5px;
+    }
     .cta {
       text-align: center;
       margin-top: 30px;
     }
-
     .cta a {
       background: var(--green);
       color: var(--white);
@@ -140,12 +152,10 @@
       font-weight: bold;
       border-radius: 5px;
     }
-
     .cta a:hover {
       background: var(--gold);
       color: var(--dark);
     }
-
     /* ================= UPDATES IMAGE ================= */
     .update-image {
       display: block;
@@ -154,7 +164,6 @@
       height: auto;
       border-radius: 8px;
     }
-
     /* ================= FOOTER ================= */
     footer {
       background: var(--dark);
@@ -162,14 +171,12 @@
       text-align: center;
       padding: 30px 20px;
     }
-
     footer a {
       color: var(--gold);
       text-decoration: none;
       margin: 0 8px;
       font-weight: bold;
     }
-
     /* ================= MOBILE ================= */
     @media (max-width: 600px) {
       .hero-text h1 {
@@ -178,12 +185,10 @@
       .hero-text h2 {
         font-size: 1rem;
       }
-
       nav a {
         display: inline-block;
         margin: 0 8px;
       }
-      
       @media (max-width: 480px) {
         nav a {
           display: block;
@@ -194,23 +199,20 @@
   </style>
 </head>
 <body>
-
   <!-- HERO -->
   <header class="hero">
     <img src="images/banner.jpg" alt="Campaign Banner" class="hero-img">
     <div class="overlay"></div>
     <div class="hero-text">
       <h1>COMR. ADAM IBRAHIM (ALKALI)</h1>
-      <h2>
-        Candidate for SUG President<br>
-        College of Nursing Science, Madobi Campus
-      </h2>
+      <h2>Candidate for SUG President<br>College of Nursing Science, Madobi Campus</h2>
     </div>
   </header>
 
   <!-- NAV -->
   <nav>
     <a href="#about">About</a>
+    <a href="#academic">Academic Journey</a>
     <a href="#vision">Vision</a>
     <a href="#why">Why Vote</a>
     <a href="#contact">Contact</a>
@@ -220,35 +222,72 @@
   <!-- ABOUT -->
   <section id="about">
     <h3>About the Candidate</h3>
-    <p>
-      I am a committed student leader of the College of Nursing Science, Madobi Campus,
-      contesting for the office of Student Union Government President with a clear mission:
-      to serve students with integrity, transparency, and responsibility.
-    </p>
-    <p>
-      Leadership to me is service — listening to students, representing their interests,
-      and working tirelessly to improve campus life.
-    </p>
+    <p>I am a committed student leader of the College of Nursing Science, Madobi Campus, contesting for the office of Student Union Government President with a clear mission: to serve students with integrity, transparency, and responsibility.</p>
+    <p>Leadership to me is service — listening to students, representing their interests, and working tirelessly to improve campus life.</p>
+  </section>
+
+  <!-- ACADEMIC JOURNEY - NEW SECTION -->
+  <section id="academic" class="highlight">
+    <h3>Academic Journey & Background</h3>
+    <p>Comr. Adam Ibrahim Alkali was born in 2003 in Tudun Wada Local Government Area of Kano State. His educational path demonstrates resilience, adaptability, and a commitment to learning.</p>
+    
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="timeline-year">2009 - 2010</span>
+        <span class="timeline-title">Early Education</span>
+        <p class="timeline-desc">Began nursery education at Model Primary School.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">2011 - 2017</span>
+        <span class="timeline-title">Primary Education</span>
+        <p class="timeline-desc">Transferred to Imam Malik Nursery and Primary School, where he completed his primary education.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">2017 - 2020</span>
+        <span class="timeline-title">Junior Secondary</span>
+        <p class="timeline-desc">Joined Junior Secondary School at Imam Malik Science and Tahfiz College.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">2020 - 2023</span>
+        <span class="timeline-title">Senior Secondary</span>
+        <p class="timeline-desc">After passing the Science and Technical Schools Board exam, he studied at Science College Dawakin Tofa (SS1A, Galadima House), completing WAEC and NECO examinations.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">2023 - 2024</span>
+        <span class="timeline-title">Remedial Studies</span>
+        <p class="timeline-desc">Studied at the College of Advanced and Remedial Studies (CAS), Tudun Wada.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-year">2024 - Present</span>
+        <span class="timeline-title">Current Studies</span>
+        <p class="timeline-desc">Currently enrolled in a two-year Community Nursing program at the College of Nursing and Midwifery, Madobi Campus.</p>
+      </div>
+    </div>
+    
+    <h4>Key Qualities Demonstrated</h4>
+    <ul>
+      <li><strong>Resilience:</strong> Adapted to multiple school transfers due to circumstances beyond his control.</li>
+      <li><strong>Determination:</strong> Successfully navigated entrance exams and interviews for competitive placements.</li>
+      <li><strong>Commitment to Education:</strong> Pursued multiple educational pathways to achieve his goal of entering the healthcare field.</li>
+      <li><strong>Understanding of Student Challenges:</strong> Personal experience with educational disruptions gives him unique insight into student needs.</li>
+    </ul>
   </section>
 
   <!-- VISION -->
-  <section id="vision" class="highlight">
+  <section id="vision">
     <h3>Vision & Manifesto</h3>
-
     <h4>🎓 Academic Support</h4>
     <ul>
       <li>Improved communication between students and management</li>
       <li>Better learning conditions</li>
       <li>Support for academic initiatives</li>
     </ul>
-
     <h4>🧑‍🤝‍🧑 Student Welfare</h4>
     <ul>
       <li>Open-door leadership</li>
       <li>Fast response to student issues</li>
       <li>Equal representation</li>
     </ul>
-
     <h4>🏫 Campus Development</h4>
     <ul>
       <li>Student participation in decisions</li>
@@ -258,7 +297,7 @@
   </section>
 
   <!-- WHY -->
-  <section id="why">
+  <section id="why" class="highlight">
     <h3>Why You Should Vote for Me</h3>
     <ul>
       <li>I listen before acting</li>
@@ -266,14 +305,13 @@
       <li>I value transparency</li>
       <li>I remain accessible</li>
     </ul>
-
     <div class="cta">
       <a href="#contact">Vote for Progress</a>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="highlight">
+  <section id="contact">
     <h3>Connect With Me</h3>
     <ul>
       <li>Facebook: <a href="https://www.facebook.com/usaini.pro.77" target="_blank">Mhoussein</a></li>
@@ -285,25 +323,15 @@
   <!-- UPDATES -->
   <section id="updates" class="highlight">
     <h3>Latest Updates</h3>
-
-    <!-- New Year Wish -->
     <p><strong>Jan 1, 2026:</strong> 🎉 Happy New Year! COMR. ADAM IBRAHIM (ALKALI) wishes all nursing students a prosperous 2026.</p>
     <img src="images/newyear.jpg" alt="COMR. ADAM IBRAHIM New Year Wish" class="update-image">
-
-    <!-- Mubarak Abdullahi Congratulations -->
     <p><strong>Jan 3, 2026:</strong> 🙏 Assalamu Alaikum Warahmatullah Wabarakatuh. I am <strong>Comrade Adam Ibrahim Alkali</strong>, a student of Community Health, College of Nursing Sciences. I'm delighted to extend my heartfelt congratulations to my brother and friend, <strong>Mubarak Abdullahi Shuaibu</strong>, on his well-deserved victory in the DAKSU election held on 3rd January 2026. May Allah guide you and grant you success in this new responsibility.</p>
     <img src="images/mbk.png" alt="Congratulations Mubarak Abdullahi" class="update-image">
-
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <p>
-      Vote Wisely. Vote Progress.<br>
-      <strong>COMR. ADAM IBRAHIM (ALKALI)</strong><br>
-      SUG President — College of Nursing Science, Madobi Campus
-    </p>
+    <p>Vote Wisely. Vote Progress.<br><strong>COMR. ADAM IBRAHIM (ALKALI)</strong><br>SUG President — College of Nursing Science, Madobi Campus</p>
   </footer>
-
 </body>
-</html>
+    </html>
