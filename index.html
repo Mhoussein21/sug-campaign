@@ -175,6 +175,45 @@
             100% { transform: scale(1); }
         }
 
+        /* ================= VOTE BUTTON PULSE ANIMATION ================= */
+        @keyframes pulse {
+            0% { 
+                transform: scale(1); 
+                box-shadow: 0 0 0 0 rgba(201, 162, 39, 0.7); 
+            }
+            70% { 
+                transform: scale(1.05); 
+                box-shadow: 0 0 0 15px rgba(201, 162, 39, 0); 
+            }
+            100% { 
+                transform: scale(1); 
+                box-shadow: 0 0 0 0 rgba(201, 162, 39, 0); 
+            }
+        }
+
+        /* Apply to the main hero button */
+        .hero-cta .cta-button:first-child {
+            animation: pulse 2s infinite;
+            position: relative;
+        }
+
+        /* Optional: Add hover effect that stops pulse and grows */
+        .hero-cta .cta-button:first-child:hover {
+            animation: none;
+            transform: scale(1.08);
+            box-shadow: 0 10px 25px rgba(201, 162, 39, 0.4);
+        }
+
+        /* Apply to the nav button as well */
+        .nav-links a.cta-button {
+            animation: pulse 2s infinite;
+        }
+
+        .nav-links a.cta-button:hover {
+            animation: none;
+            transform: scale(1.05);
+        }
+
         /* ================= SECTIONS ================= */
         section {
             padding: 80px 20px;
@@ -522,6 +561,15 @@
             body {
                 padding-top: 70px;
             }
+
+            /* Adjust pulse for mobile */
+            .hero-cta .cta-button:first-child {
+                animation: pulse 2.5s infinite;
+            }
+            
+            .nav-links a.cta-button {
+                animation: pulse 2.5s infinite;
+            }
         }
 
         @media (max-width: 480px) {
@@ -537,6 +585,10 @@
             
             section h3 {
                 font-size: 1.8rem;
+            }
+            
+            .hero-cta .cta-button:first-child {
+                animation: pulse 3s infinite;
             }
         }
     </style>
