@@ -71,11 +71,14 @@
             color: var(--dark);
             font-weight: bold;
             padding: 8px 20px;
+            animation: pulse 2s infinite;
         }
 
         .nav-links a.cta-button:hover {
             background: #d4b123;
             color: var(--dark);
+            animation: none;
+            transform: scale(1.05);
         }
 
         /* Hamburger Button */
@@ -202,16 +205,6 @@
             animation: none;
             transform: scale(1.08);
             box-shadow: 0 10px 25px rgba(201, 162, 39, 0.4);
-        }
-
-        /* Apply to the nav button as well */
-        .nav-links a.cta-button {
-            animation: pulse 2s infinite;
-        }
-
-        .nav-links a.cta-button:hover {
-            animation: none;
-            transform: scale(1.05);
         }
 
         /* ================= SECTIONS ================= */
@@ -371,13 +364,6 @@
         .social-icon:hover {
             background: var(--gold);
             transform: translateY(-3px);
-        }
-
-        .map-container {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            margin-top: 20px;
         }
 
         /* ================= ENDORSEMENTS ================= */
@@ -808,16 +794,20 @@
                 <h4><i class="fas fa-map-marked-alt"></i> Campus Location</h4>
                 <p style="margin-bottom: 20px;">College of Nursing Science, Madobi Campus, Kano State, Nigeria.</p>
                 
-                <!-- Google Maps Embed -->
-                <div class="map-container">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.789123456789!2d8.5169!3d11.5964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDM1JzQ3LjAiTiA4wrAzMScwMC44IkU!5e0!3m2!1sen!2sng!4v1621234567890!5m2!1sen!2sng" 
-                        width="100%" 
-                        height="300" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
+                <!-- 🖼️ CAMPUS PHOTO INSTEAD OF MAP -->
+                <div style="text-align: center; border-radius: 12px; overflow: hidden; box-shadow: var(--card-shadow); margin-top: 20px;">
+                    <img src="images/campus.jpg" 
+                         alt="College of Nursing Science, Madobi Campus" 
+                         style="width: 100%; height: 300px; object-fit: cover;"
+                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    <div style="margin-top: 10px; padding: 10px; background: rgba(11, 61, 46, 0.05); border-radius: 5px;">
+                        <p style="margin: 5px 0; color: var(--green);">
+                            <i class="fas fa-university"></i> <strong>College of Nursing Science</strong>
+                        </p>
+                        <p style="margin: 5px 0; font-size: 0.9rem;">
+                            Madobi Campus, Kano State
+                        </p>
+                    </div>
                 </div>
                 
                 <div style="margin-top: 25px; padding: 20px; background: #f9f9f9; border-radius: 8px;">
@@ -825,6 +815,27 @@
                     <p style="margin: 5px 0;">Monday - Friday: 9:00 AM - 5:00 PM</p>
                     <p style="margin: 5px 0;">Saturday: 10:00 AM - 2:00 PM</p>
                     <p style="margin: 5px 0;">Sunday: Closed</p>
+                </div>
+                
+                <!-- Directions section -->
+                <div style="margin-top: 20px; padding: 15px; background: var(--light-green); border-radius: 8px;">
+                    <h5 style="color: var(--green); margin-bottom: 10px;">
+                        <i class="fas fa-directions"></i> How to Get Here
+                    </h5>
+                    <ul style="list-style: none; padding-left: 0;">
+                        <li style="margin-bottom: 8px; padding-left: 25px; position: relative;">
+                            <i class="fas fa-bus" style="color: var(--gold); position: absolute; left: 0;"></i>
+                            Take Madobi Road from Kano City
+                        </li>
+                        <li style="margin-bottom: 8px; padding-left: 25px; position: relative;">
+                            <i class="fas fa-map-signs" style="color: var(--gold); position: absolute; left: 0;"></i>
+                            Look for College of Nursing Science signpost
+                        </li>
+                        <li style="margin-bottom: 8px; padding-left: 25px; position: relative;">
+                            <i class="fas fa-landmark" style="color: var(--gold); position: absolute; left: 0;"></i>
+                            Main gate is on the left side of the road
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -843,7 +854,7 @@
             <div class="vote-step">
                 <div class="step-number">2</div>
                 <h4>Know the Date</h4>
-                <p>Election Day: <strongTo be Announce</strong><br>Time: <strong>8:00 AM - 4:00 PM</strong></p>
+                <p>Election Day: <strong>To be Announced</strong><br>Time: <strong>8:00 AM - 4:00 PM</strong></p>
             </div>
             
             <div class="vote-step">
@@ -855,8 +866,7 @@
             <div class="vote-step">
                 <div class="step-number">4</div>
                 <h4>Cast Your Vote</h4>
-                <p>Proceed to the designated voting center <strong>(sa'idu fage) hall.</strong>
-</p>
+                <p>Proceed to the designated voting center <strong>(Sa'idu Fage Hall)</strong></p>
             </div>
         </div>
         
@@ -869,67 +879,66 @@
         </div>
     </section>
 
-   
-  <!-- UPDATES SECTION -->
-<section id="updates" style="background: var(--light-green);">
-    <h3>Latest Updates</h3>
-    
-    <div class="cards-container">
-        <!-- 🆕 NEW UPDATE - Add this at the TOP -->
-        <div class="card">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                <span style="background: var(--green); color: var(--white); padding: 5px 15px; border-radius: 20px; font-weight: bold;">Jan 5, 2026</span>
-                <span style="color: var(--gold);"><i class="fas fa-graduation-cap"></i> Welcome Back</span>
+    <!-- UPDATES SECTION -->
+    <section id="updates" style="background: var(--light-green);">
+        <h3>Latest Updates</h3>
+        
+        <div class="cards-container">
+            <!-- 🆕 NEW UPDATE - January 5, 2026 -->
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <span style="background: var(--green); color: var(--white); padding: 5px 15px; border-radius: 20px; font-weight: bold;">Jan 5, 2026</span>
+                    <span style="color: var(--gold);"><i class="fas fa-graduation-cap"></i> Welcome Back</span>
+                </div>
+                <h4>Welcome to Returning Students!</h4>
+                <p>🎉 <strong>A warm welcome to all returning students!</strong><br><br>
+                Comr. Adam Ibrahim Alkali extends his heartfelt greetings to our dear colleagues, especially the Community Midwifery Set 2. Your dedication is inspiring, and your success so far is worth celebrating.<br><br>
+                As you continue this academic journey, stay focused, stay disciplined, and strive for excellence.<br><br>
+                <em>More wins ahead, insha'Allah!</em> 🌟</p>
+                <div style="text-align: center; margin-top: 20px;">
+                    <img src="images/resume.jpg" alt="Welcome Returning Students" style="width: 100%; max-width: 400px; border-radius: 8px; margin: 0 auto; border: 3px solid var(--gold);">
+                </div>
+                <div style="margin-top: 15px; text-align: center;">
+                    <span style="display: inline-block; background: var(--light-green); color: var(--green); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">
+                        <i class="fas fa-users"></i> Community Midwifery Set 2
+                    </span>
+                    <span style="display: inline-block; background: #fff3cd; color: #856404; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; margin-left: 10px;">
+                        <i class="fas fa-star"></i> Academic Excellence
+                    </span>
+                </div>
             </div>
-            <h4>Welcome to Returning Students!</h4>
-            <p>🎉 <strong>A warm welcome to all returning students!</strong><br><br>
-            Comr. Adam Ibrahim Alkali extends his heartfelt greetings to our dear colleagues, especially the Community Midwifery Set 2. Your dedication is inspiring, and your success so far is worth celebrating.<br><br>
-            As you continue this academic journey, stay focused, stay disciplined, and strive for excellence.<br><br>
-            <em>More wins ahead, insha'Allah!</em> 🌟</p>
-            <div style="text-align: center; margin-top: 20px;">
-                <img src="images/resume.jpg" alt="Welcome Returning Students" style="width: 100%; max-width: 400px; border-radius: 8px; margin: 0 auto; border: 3px solid var(--gold);">
+            
+            <!-- Original Update 1 -->
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <span style="background: var(--gold); color: var(--dark); padding: 5px 15px; border-radius: 20px; font-weight: bold;">Jan 3, 2026</span>
+                    <span style="color: var(--green);"><i class="fas fa-handshake"></i> Congratulations</span>
+                </div>
+                <h4>Congratulations to Mubarak Abdullahi</h4>
+                <p>Assalamu Alaikum Warahmatullah Wabarakatuh. I extend my heartfelt congratulations to my brother and friend, Mubarak Abdullahi Shuaibu, on his victory in the DAKSU election.</p>
+                <div style="text-align: center; margin-top: 20px;">
+                    <img src="images/mbk.png" alt="Congratulations Mubarak Abdullahi" style="width: 100%; max-width: 400px; border-radius: 8px; margin: 0 auto;">
+                </div>
             </div>
-            <div style="margin-top: 15px; text-align: center;">
-                <span style="display: inline-block; background: var(--light-green); color: var(--green); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">
-                    <i class="fas fa-users"></i> Community Midwifery Set 2
-                </span>
-                <span style="display: inline-block; background: #fff3cd; color: #856404; padding: 5px 15px; border-radius: 20px; font-size: 0.9rem; margin-left: 10px;">
-                    <i class="fas fa-star"></i> Academic Excellence
-                </span>
+            
+            <!-- Original Update 2 -->
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <span style="background: var(--gold); color: var(--dark); padding: 5px 15px; border-radius: 20px; font-weight: bold;">Jan 1, 2026</span>
+                    <span style="color: var(--green);"><i class="fas fa-bullhorn"></i> Announcement</span>
+                </div>
+                <h4>Happy New Year Message</h4>
+                <p>COMR. ADAM IBRAHIM (ALKALI) wishes all nursing students a prosperous, healthy, and successful 2026. May this year bring us closer to our academic and professional goals.</p>
+                <div style="text-align: center; margin-top: 20px;">
+                    <img src="images/newyear.jpg" alt="New Year Greetings" style="width: 100%; max-width: 400px; border-radius: 8px; margin: 0 auto;">
+                </div>
             </div>
         </div>
         
-        <!-- Original Update 1 (now becomes second) -->
-        <div class="card">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                <span style="background: var(--gold); color: var(--dark); padding: 5px 15px; border-radius: 20px; font-weight: bold;">Jan 3, 2026</span>
-                <span style="color: var(--green);"><i class="fas fa-handshake"></i> Congratulations</span>
-            </div>
-            <h4>Congratulations to Mubarak Abdullahi</h4>
-            <p>Assalamu Alaikum Warahmatullah Wabarakatuh. I extend my heartfelt congratulations to my brother and friend, Mubarak Abdullahi Shuaibu, on his victory in the DAKSU election.</p>
-            <div style="text-align: center; margin-top: 20px;">
-                <img src="images/mbk.png" alt="Congratulations Mubarak Abdullahi" style="width: 100%; max-width: 400px; border-radius: 8px; margin: 0 auto;">
-            </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="#contact" class="cta-button">FOLLOW FOR MORE UPDATES</a>
         </div>
-        
-        <!-- Original Update 2 (now becomes third) -->
-        <div class="card">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                <span style="background: var(--gold); color: var(--dark); padding: 5px 15px; border-radius: 20px; font-weight: bold;">Jan 1, 2026</span>
-                <span style="color: var(--green);"><i class="fas fa-bullhorn"></i> Announcement</span>
-            </div>
-            <h4>Happy New Year Message</h4>
-            <p>COMR. ADAM IBRAHIM (ALKALI) wishes all nursing students a prosperous, healthy, and successful 2026. May this year bring us closer to our academic and professional goals.</p>
-            <div style="text-align: center; margin-top: 20px;">
-                <img src="images/newyear.jpg" alt="New Year Greetings" style="width: 100%; max-width: 400px; border-radius: 8px; margin: 0 auto;">
-            </div>
-        </div>
-    </div>
-    
-    <div style="text-align: center; margin-top: 40px;">
-        <a href="#contact" class="cta-button">FOLLOW FOR MORE UPDATES</a>
-    </div>
-</section>
+    </section>
 
     <!-- FOOTER -->
     <footer>
