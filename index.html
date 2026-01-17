@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>COMR. ADAM IBRAHIM (ALKALI) | SUG President</title>
+    
+    <!-- Add SEO Meta Tags -->
+    <meta name="description" content="Official campaign website for Comr. Adam Ibrahim (Alkali), candidate for SUG President at College of Nursing Science, Madobi Campus, Kano State">
+    <meta name="keywords" content="SUG President, College of Nursing, Madobi Campus, Alkali For SUG, Madobi SUG, Student Union, Election, Adam Ibrahim Alkali, Nursing Student">
+    <meta name="author" content="Comr. Adam Ibrahim Alkali Campaign">
+    <meta property="og:title" content="COMR. ADAM IBRAHIM (ALKALI) for SUG President">
+    <meta property="og:description" content="Your candidate for SUG President at College of Nursing Science, Madobi Campus">
+    <meta property="og:type" content="website">
+    
     <style>
         :root {
             --green: #0b3d2e;
@@ -90,6 +99,9 @@
             position: absolute;
             right: 20px;
             top: 15px;
+            background: none;
+            border: none;
+            padding: 5px;
         }
 
         /* ================= HERO SECTION ================= */
@@ -159,6 +171,7 @@
             background: transparent;
             color: var(--gold);
             transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(201, 162, 39, 0.2);
         }
 
         .cta-button.secondary {
@@ -315,6 +328,11 @@
             height: 250px;
             object-fit: cover;
             display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
         }
 
         .gallery-caption {
@@ -421,6 +439,7 @@
         .social-icon:hover {
             background: var(--gold);
             transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(201, 162, 39, 0.3);
         }
 
         /* ================= ENDORSEMENTS ================= */
@@ -477,6 +496,11 @@
             background: var(--white);
             border-radius: 12px;
             box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .vote-step:hover {
+            transform: translateY(-5px);
         }
 
         .step-number {
@@ -490,6 +514,7 @@
             font-weight: bold;
             font-size: 1.3rem;
             margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(201, 162, 39, 0.2);
         }
 
         /* ================= FOOTER ================= */
@@ -560,6 +585,19 @@
 
         .date-badge i {
             margin-right: 5px;
+        }
+
+        /* ================= IMAGE LOADING ================= */
+        .loading-placeholder {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+            border-radius: 8px;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
         }
 
         /* ================= MOBILE RESPONSIVE ================= */
@@ -678,7 +716,7 @@
 <body>
     <!-- STICKY NAVIGATION WITH HAMBURGER -->
     <nav>
-        <div class="hamburger">☰</div>
+        <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
         <div class="nav-links">
             <a href="#" class="active">Home</a>
             <a href="#about">About</a>
@@ -695,7 +733,7 @@
 
     <!-- HERO SECTION -->
     <header class="hero">
-        <img src="images/banner.jpg" alt="Campaign Banner" class="hero-img">
+        <img src="images/cnurse.jpg" alt="Comr. Adam Ibrahim Alkali - Community Nurse Leader" class="hero-img">
         <div class="overlay"></div>
         <div class="hero-text">
             <h1>COMR. ADAM IBRAHIM (ALKALI)</h1>
@@ -712,8 +750,8 @@
         <h3>About the Candidate</h3>
         <div style="max-width: 800px; margin: 0 auto;">
             <p style="font-size: 1.1rem; text-align: center; margin-bottom: 25px;">I am a committed student leader of the College of Nursing Science, Madobi Campus, contesting for the office of Student Union Government President with a clear mission: to serve students with integrity, transparency, and responsibility.</p>
-            <p style="font-size: 1.1rem; text-align: center; font-style: italic; color: var(--green);">
-                "A typical community Nurse by department but cosmopolitan by interaction"
+            <p style="font-size: 1.1rem; text-align: center; font-style: italic; color: var(--green); padding: 20px; background: var(--light-green); border-radius: 10px;">
+                <strong>"A typical community Nurse by department but cosmopolitan by interaction"</strong>
             </p>
         </div>
     </section>
@@ -728,21 +766,27 @@
                 <h4 style="color: var(--green); margin-bottom: 15px;">Educational Timeline</h4>
                 <ul style="list-style: none; padding-left: 0;">
                     <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
+                        <i class="fas fa-school" style="color: var(--gold); position: absolute; left: 0;"></i>
                         <strong>2009-2010:</strong> Model Primary School (Nursery)
                     </li>
                     <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
+                        <i class="fas fa-school" style="color: var(--gold); position: absolute; left: 0;"></i>
                         <strong>2011-2017:</strong> Imam Malik Nursery and Primary School
                     </li>
                     <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
+                        <i class="fas fa-graduation-cap" style="color: var(--gold); position: absolute; left: 0;"></i>
                         <strong>2017-2020:</strong> Imam Malik Science and Tahfiz College (Junior Secondary)
                     </li>
                     <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
+                        <i class="fas fa-graduation-cap" style="color: var(--gold); position: absolute; left: 0;"></i>
                         <strong>2020-2023:</strong> Science College Dawakin Tofa (Senior Secondary)
                     </li>
                     <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
+                        <i class="fas fa-university" style="color: var(--gold); position: absolute; left: 0;"></i>
                         <strong>2023-2024:</strong> College of Advanced and Remedial Studies (CAS), Tudun Wada
                     </li>
                     <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
+                        <i class="fas fa-user-md" style="color: var(--gold); position: absolute; left: 0;"></i>
                         <strong>2024-Present:</strong> College of Nursing and Midwifery, Madobi Campus (Community Nursing)
                     </li>
                 </ul>
@@ -766,11 +810,13 @@
             <p>Officially certified by the Nigerian Police Force as a person of good character with no criminal records.</p>
             
             <div style="text-align: center; margin: 25px 0;">
-                <img src="images/police-clearance.jpg" alt="Police Clearance Certificate" 
-                     style="max-width: 100%; border-radius: 8px; border: 3px solid var(--light-green); box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <img src="images/police-clearance.jpg" alt="Police Clearance Certificate - Adam Ibrahim Muhammad" 
+                     style="max-width: 100%; border-radius: 8px; border: 3px solid var(--light-green); box-shadow: 0 5px 15px rgba(0,0,0,0.1);"
+                     class="loading-placeholder">
                 <div style="margin-top: 15px;">
                     <span class="badge">Official Certificate</span>
                     <span class="badge" style="background: var(--green); color: white;">Verified Character</span>
+                    <span class="badge" style="background: var(--gold); color: var(--dark);">No Criminal Records</span>
                 </div>
             </div>
             
@@ -803,8 +849,9 @@
                     <p>Demonstrated commitment through active support and congratulatory message to the former SUG President of College of Nursing and Midwifery, Madobi Campus.</p>
                     
                     <div style="margin-top: 20px;">
-                        <img src="images/former-sug.jpg" alt="Congratulating Former SUG President" 
-                             style="width: 100%; border-radius: 8px; border: 2px solid var(--light-green);">
+                        <img src="images/former-sug.jpg" alt="Congratulating Former SUG President - Comr. Jamilu Tijjani Wada" 
+                             style="width: 100%; border-radius: 8px; border: 2px solid var(--light-green);"
+                             class="loading-placeholder">
                     </div>
                     
                     <div style="margin-top: 15px;">
@@ -813,6 +860,9 @@
                         </span>
                         <span class="date-badge">
                             <i class="fas fa-users"></i> Student Union
+                        </span>
+                        <span class="date-badge">
+                            <i class="fas fa-award"></i> Courtesy: Comr. Adam Akali
                         </span>
                     </div>
                 </div>
@@ -843,6 +893,16 @@
                             </li>
                         </ul>
                     </div>
+                    
+                    <!-- If office.jpg exists, add it here -->
+                    <div style="margin-top: 20px; text-align: center;">
+                        <div style="background: var(--light-green); padding: 20px; border-radius: 8px;">
+                            <i class="fas fa-briefcase" style="font-size: 2rem; color: var(--green);"></i>
+                            <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                                <strong>Office Experience:</strong> Familiar with SUG office operations and responsibilities
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -855,7 +915,7 @@
         <div class="image-gallery">
             <!-- KD Legacy Program -->
             <div class="gallery-item">
-                <img src="images/kd-legacy.jpg" alt="KD Legacy 2.0 Program">
+                <img src="images/kd-legacy.jpg" alt="KD Legacy 2.0 Program - Desert Rising Leaders" class="loading-placeholder">
                 <div class="gallery-caption">
                     <h4>KD Legacy 2.0 Program</h4>
                     <p>Selected participant in Desert Rising Leaders youth capacity building program for emerging leaders.</p>
@@ -873,7 +933,7 @@
             
             <!-- WHO International Conference -->
             <div class="gallery-item">
-                <img src="images/who.jpg" alt="WHO International Conference">
+                <img src="images/who.jpg" alt="WHO International Conference for Family Planning - Speaker" class="loading-placeholder">
                 <div class="gallery-caption">
                     <h4>WHO International Conference</h4>
                     <p>Invited speaker at International Conference for Family Planning side event hosted by Incepta Pharmaceuticals.</p>
@@ -891,7 +951,7 @@
             
             <!-- Innovation Hub Conference -->
             <div class="gallery-item">
-                <img src="images/innovation.jpg" alt="Innovation Hub Conference">
+                <img src="images/innovation.jpg" alt="Innovation Hub Conference - Unlocking Nigeria's Innovation Potential" class="loading-placeholder">
                 <div class="gallery-caption">
                     <h4>Innovation Hub Conference</h4>
                     <p>Attended "Unlocking Nigeria's Innovation Potential - Hub As Engines Of Transformation" conference.</p>
@@ -916,7 +976,7 @@
         <div class="image-gallery">
             <!-- CNG Students Wing -->
             <div class="gallery-item">
-                <img src="images/cng-lecture.jpg" alt="CNG Public Lecture">
+                <img src="images/cng-lecture.jpg" alt="Coalition of Northern Group Public Lecture - Building Responsible Student Leadership" class="loading-placeholder">
                 <div class="gallery-caption">
                     <h4>Coalition of Northern Group (CNG)</h4>
                     <p>Active participant in public lecture on "Building Responsible Student Leadership" at Kano State Chapter.</p>
@@ -934,7 +994,7 @@
             
             <!-- NANS Educational Trip -->
             <div class="gallery-item">
-                <img src="images/nans-trip.jpg" alt="NANS Educational Trip">
+                <img src="images/nans-trip.jpg" alt="NANS Educational & Recreational Trip to Minjibir Park - Social Director" class="loading-placeholder">
                 <div class="gallery-caption">
                     <h4>NANS Educational & Recreational Trip</h4>
                     <p>Organized trip to Minjibir Park as Social Director of NANS Kano Axis for student community building.</p>
@@ -952,7 +1012,7 @@
             
             <!-- Community Nursing -->
             <div class="gallery-item">
-                <img src="images/cnurse.jpg" alt="Community Nurses in Action">
+                <img src="images/cnurse.jpg" alt="Community Nurses in Action - Healthcare Leadership" class="loading-placeholder">
                 <div class="gallery-caption">
                     <h4>Community Nursing Leadership</h4>
                     <p>Active involvement in community nursing initiatives, demonstrating hands-on healthcare leadership.</p>
@@ -970,7 +1030,7 @@
         </div>
         
         <div style="text-align: center; margin-top: 40px;">
-            <p style="max-width: 800px; margin: 0 auto 20px; font-size: 1.1rem;">
+            <p style="max-width: 800px; margin: 0 auto 20px; font-size: 1.1rem; padding: 20px; background: var(--light-green); border-radius: 10px;">
                 <strong>"Comrd is social everywhere"</strong> - From educational trips to international conferences, 
                 demonstrating versatile engagement across various platforms and communities.
             </p>
@@ -1104,13 +1164,13 @@
                 </div>
                 
                 <div class="social-links">
-                    <a href="https://www.facebook.com/usaini.pro.77" target="_blank" class="social-icon">
+                    <a href="https://www.facebook.com/usaini.pro.77" target="_blank" class="social-icon" aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.tiktok.com/@mhoussein21" target="_blank" class="social-icon">
+                    <a href="https://www.tiktok.com/@mhoussein21" target="_blank" class="social-icon" aria-label="TikTok">
                         <i class="fab fa-tiktok"></i>
                     </a>
-                    <a href="https://wa.me/2349040288121" target="_blank" class="social-icon">
+                    <a href="https://wa.me/2349040288121" target="_blank" class="social-icon" aria-label="WhatsApp" style="background: #25D366;">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
@@ -1119,13 +1179,12 @@
             <div class="contact-card">
                 <h4><i class="fas fa-map-marked-alt"></i> Campus Location</h4>
                 <p style="margin-bottom: 20px;">College of Nursing Science, 12km lambar burji, Madobi Campus, Kano State, Nigeria.</p>
-                
-                <!-- 🖼️ CAMPUS PHOTO INSTEAD OF MAP -->
+        
                 <div style="text-align: center; border-radius: 12px; overflow: hidden; box-shadow: var(--card-shadow); margin-top: 20px;">
-                    <img src="images/cons.jpeg" 
-                         alt="College of Nursing Science, Madobi Campus" 
+                    <img src="images/cnurse.jpg" 
+                         alt="College of Nursing Science, Madobi Campus - Community Nursing Department" 
                          style="width: 100%; height: 300px; object-fit: cover;"
-                         onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                         class="loading-placeholder">
                     <div style="margin-top: 10px; padding: 10px; background: rgba(11, 61, 46, 0.05); border-radius: 5px;">
                         <p style="margin: 5px 0; color: var(--green);">
                             <i class="fas fa-university"></i> <strong>College of Nursing Science</strong>
@@ -1221,9 +1280,20 @@
                 Comr. Adam Ibrahim Alkali extends his heartfelt greetings to our dear colleagues, especially the Community Midwifery Set 2. Your dedication is inspiring, and your success so far is worth celebrating.<br><br>
                 As you continue this academic journey, stay focused, stay disciplined, and strive for excellence.<br><br>
                 <em>More wins ahead, insha'Allah!</em> 🌟</p>
+                
+                <!-- Using available image as placeholder -->
                 <div style="text-align: center; margin-top: 20px;">
-                    <img src="images/resume.jpg" alt="Welcome Returning Students" style="width: 100%; max-width: 400px; border-radius: 8px; margin: 0 auto; border: 3px solid var(--gold);">
+                    <div style="background: linear-gradient(135deg, var(--light-green), white); padding: 40px; border-radius: 8px; border: 2px dashed var(--gold);">
+                        <i class="fas fa-users" style="font-size: 3rem; color: var(--green);"></i>
+                        <p style="margin-top: 15px; color: var(--green); font-weight: bold;">
+                            Community Midwifery Set 2
+                        </p>
+                        <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                            Welcome back to campus!
+                        </p>
+                    </div>
                 </div>
+                
                 <div style="margin-top: 15px; text-align: center;">
                     <span style="display: inline-block; background: var(--light-green); color: var(--green); padding: 5px 15px; border-radius: 20px; font-size: 0.9rem;">
                         <i class="fas fa-users"></i> Community Midwifery Set 2
@@ -1242,8 +1312,19 @@
                 </div>
                 <h4>Congratulations to Mubarak Abdullahi</h4>
                 <p>Assalamu Alaikum Warahmatullah Wabarakatuh. I extend my heartfelt congratulations to my brother and friend, Mubarak Abdullahi Shuaibu, on his victory in the DAKSU election.</p>
+                
+                <!-- Using available image or placeholder -->
                 <div style="text-align: center; margin-top: 20px;">
-                    <img src="images/mbk.png" alt="Congratulations Mubarak Abdullahi" style="width: 100%; max-width: 400px; border-radius: 8px; margin: 0 auto;">
+                    <div style="background: linear-gradient(135deg, #f8f9fa, white); padding: 30px; border-radius: 8px;">
+                        <i class="fas fa-trophy" style="font-size: 2.5rem; color: var(--gold);"></i>
+                        <p style="margin-top: 15px; color: var(--green);">
+                            <strong>Congratulations!</strong><br>
+                            Mubarak Abdullahi Shuaibu
+                        </p>
+                        <p style="margin-top: 5px; font-size: 0.9rem; color: #666;">
+                            DAKSU Election Winner
+                        </p>
+                    </div>
                 </div>
             </div>
             
@@ -1255,8 +1336,18 @@
                 </div>
                 <h4>Happy New Year Message</h4>
                 <p>COMR. ADAM IBRAHIM (ALKALI) wishes all nursing students a prosperous, healthy, and successful 2026. May this year bring us closer to our academic and professional goals.</p>
+                
+                <!-- New Year placeholder -->
                 <div style="text-align: center; margin-top: 20px;">
-                    <img src="images/newyear.jpg" alt="New Year Greetings" style="width: 100%; max-width: 400px; border-radius: 8px; margin: 0 auto;">
+                    <div style="background: linear-gradient(135deg, #ffebee, #fce4ec); padding: 30px; border-radius: 8px; border: 2px solid var(--gold);">
+                        <i class="fas fa-calendar-star" style="font-size: 2.5rem; color: #e91e63;"></i>
+                        <p style="margin-top: 15px; color: var(--green); font-weight: bold;">
+                            Happy New Year 2026!
+                        </p>
+                        <p style="margin-top: 5px; font-size: 0.9rem; color: #666;">
+                            Wishing you success and prosperity
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1280,9 +1371,15 @@
         </div>
         
         <div style="margin: 25px 0;">
-            <a href="https://www.facebook.com/usaini.pro.77" target="_blank" style="color: white; margin: 0 10px; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
-            <a href="https://www.tiktok.com/@mhoussein21" target="_blank" style="color: white; margin: 0 10px; font-size: 1.2rem;"><i class="fab fa-tiktok"></i></a>
-            <a href="https://wa.me/2349040288121" target="_blank" style="color: white; margin: 0 10px; font-size: 1.2rem;"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/usaini.pro.77" target="_blank" style="color: white; margin: 0 10px; font-size: 1.2rem;" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.tiktok.com/@mhoussein21" target="_blank" style="color: white; margin: 0 10px; font-size: 1.2rem;" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://wa.me/2349040288121" target="_blank" style="color: white; margin: 0 10px; font-size: 1.2rem;" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
         </div>
         
         <div class="copyright">
@@ -1297,8 +1394,10 @@
         const navLinks = document.querySelector('.nav-links');
         
         hamburger.addEventListener('click', () => {
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
             navLinks.classList.toggle('active');
             hamburger.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
         });
         
         // Close menu when clicking a link
@@ -1306,6 +1405,7 @@
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 hamburger.textContent = '☰';
+                hamburger.setAttribute('aria-expanded', 'false');
                 
                 // Smooth scroll to section
                 const targetId = link.getAttribute('href');
@@ -1326,6 +1426,7 @@
             if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
                 navLinks.classList.remove('active');
                 hamburger.textContent = '☰';
+                hamburger.setAttribute('aria-expanded', 'false');
             }
         });
         
@@ -1355,8 +1456,27 @@
         // Image lazy loading enhancement
         document.addEventListener('DOMContentLoaded', function() {
             const images = document.querySelectorAll('img');
+            
+            // Remove loading placeholders when images load
             images.forEach(img => {
-                if (!img.complete) {
+                if (img.classList.contains('loading-placeholder')) {
+                    img.addEventListener('load', function() {
+                        this.style.opacity = '0';
+                        setTimeout(() => {
+                            this.classList.remove('loading-placeholder');
+                            this.style.opacity = '1';
+                            this.style.transition = 'opacity 0.5s ease';
+                        }, 100);
+                    });
+                    
+                    // Handle image errors
+                    img.addEventListener('error', function() {
+                        this.classList.remove('loading-placeholder');
+                        this.style.opacity = '1';
+                        console.log('Image failed to load:', this.src);
+                    });
+                } else {
+                    // Regular images
                     img.style.opacity = '0';
                     img.addEventListener('load', function() {
                         this.style.transition = 'opacity 0.5s ease';
@@ -1364,7 +1484,34 @@
                     });
                 }
             });
+            
+            // External link confirmation
+            document.querySelectorAll('a[target="_blank"]').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (!confirm('You are about to leave the campaign website. Continue?')) {
+                        e.preventDefault();
+                    }
+                });
+            });
         });
+        
+        // Add election countdown (placeholder - update when date is announced)
+        function updateElectionCountdown() {
+            const electionDate = new Date('2026-03-01'); // Placeholder date - UPDATE THIS
+            const now = new Date();
+            const diff = electionDate - now;
+            
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const countdownElement = document.querySelector('.election-countdown');
+                if (countdownElement) {
+                    countdownElement.innerHTML = `<strong>${days} days</strong> until election day!`;
+                }
+            }
+        }
+        
+        // Call on page load
+        window.addEventListener('load', updateElectionCountdown);
     </script>
 </body>
 </html>
