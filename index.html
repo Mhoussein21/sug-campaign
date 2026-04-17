@@ -28,10 +28,23 @@
             line-height: 1.6;
             padding-top: 80px;
         }
-/* ================= TEAM ALKAI BANNER ================= */
+/* ================= TEAM ALKAI BANNER (BLENDED) ================= */
 .team-banner {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding: 0 20px;
+}
+
+.team-banner img {
     width: 100%;
-    margin-top: 70px; /* saboda fixed navbar */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.team-banner img:hover {
+    transform: scale(1.02);
 }
 
 .team-banner img {
