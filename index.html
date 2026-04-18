@@ -586,6 +586,48 @@
             margin-right: 5px;
         }
 
+/* TEAM GRID */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* CARD */
+.team-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+}
+
+/* IMAGE */
+.team-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+.team-card h4 {
+    color: var(--green);
+    font-size: 1.1rem;
+}
+
+.team-card p {
+    color: var(--gold);
+    font-weight: bold;
+    margin-top: 5px;
+}
         /* ================= MOBILE RESPONSIVE ================= */
         @media (max-width: 1024px) {
             .nav-links a {
@@ -757,7 +799,7 @@
     </div>
 
     <div class="team-card">
-        <img src="images/fatima-vp.jpg">
+        <img src="images/fatim.jpg">
         <h4>Fatima Isma'il Idris</h4>
         <p>For Vice President</p>
     </div>
